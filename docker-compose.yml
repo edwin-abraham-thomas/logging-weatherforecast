@@ -1,0 +1,18 @@
+services:
+  weatherforecast:
+    image: ${DOCKER_REGISTRY-}weatherforecast
+    build:
+      context: .
+      dockerfile: WeatherForecast/Dockerfile
+  
+  temperatureservice:
+    image: ${DOCKER_REGISTRY-}temperatureservice
+    build:
+      context: .
+      dockerfile: TemperatureService/Dockerfile
+  
+  weathersummaryservice:
+    image: ${DOCKER_REGISTRY-}weathersummaryservice
+    build:
+      context: .
+      dockerfile: WeatherSummaryService/Dockerfile
