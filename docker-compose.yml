@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: WeatherForecast/Dockerfile
+    ports:
+      - "1121:80"
   
   temperatureservice:
     image: ${DOCKER_REGISTRY-}temperatureservice
